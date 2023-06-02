@@ -13,7 +13,7 @@ h1 {
   font-size: 50px;
   color: darkred;
   text-decoration: underline;
-  margin-bottom: 10px;
+  margin: 100px;
   text-align: center;
 }
 
@@ -24,8 +24,8 @@ h1 {
     top: 50%;
     left: 50%;
     padding: 20px;
-    background: rgb(8, 97, 241);
-    border-radius: 10px;
+    background: rgb(31, 37, 45);
+    border: 3px solid #111111;
     min-width: 450px;
     position: absolute;
     min-height: 100px;
@@ -54,7 +54,7 @@ input:focus{
     border-color: #e6e9ec;
 }
 
-button{
+#addTask{
     position: relative;
     font-weight: 500;
     font-size: 16px;
@@ -68,12 +68,26 @@ button{
     border-radius: 5px;
     font-family: 'Poppins',sans-serif;
 }
+#fix{
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #c1c3c7;
+    border: none;
+    color: #1c1b1d;
+    cursor: pointer;
+    outline: none;
+    width: 10%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;  
+}
 
 #tasks{
     border-radius: 10px;
     width: 100%;
     position: relative;
-    background-color: #2d11be;
+    background-color: #0b67c4;
     padding: 30px 20px;
     margin-top: 10px;
 }
@@ -82,9 +96,9 @@ button{
     border-radius: 5px;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #292c2e;
+    border: 2px solid #090a0b;
     cursor: pointer;
-    background-color: #2a9baf;
+    background-color: #d8d9d9;
     height: 50px;
     margin-bottom: 8px;
     padding: 5px 10px;

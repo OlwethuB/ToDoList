@@ -85,7 +85,7 @@ document.querySelector("#addTask").onclick = function () {
   } else {
     document.querySelector("#tasks").innerHTML += `
               <div class="task">
-                              <button class="done">
+                              <button class="done" onclick='strike'>
                       <i class="far fa-trash-alt"></i>
                   </button>
                   <span id="name">
@@ -105,4 +105,9 @@ document.querySelector("#addTask").onclick = function () {
     }
   }
 };
+
+function strike(){
+    let ele = document.getElementsByClassName("name");
+    ele.style.setProperty("text-decoration", "line-through");
+}
 
