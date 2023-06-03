@@ -1,20 +1,20 @@
 function fix() {
   let sortOptions = document.querySelector("task");
-  sortOptions.innerHtml(
+  sortOptions.innerHtml
     sortOptions.find("span").sort(function (span1, span2) {
       return document.getElementsByElement(span1).text() < document.getElementByElement(span2).text() ? -1 : 1;
     })
-  );
+  ;
 }
 
 document.querySelector("#addTask").onclick = function () {
+  let line = document.querySelector("#tasks");
   if (document.querySelector("#input").value.length == 0) {
     alert("Please Enter a Task");
   } else {
     document.querySelector("#tasks").innerHTML += `
               <div class="task">
                   <button class="done" onclick='strike()'>
-                      <i class="far fa-trash-alt"></i>
                   </button>
                   <span id="name">
                       ${document.querySelector("#input").value}
@@ -31,22 +31,26 @@ document.querySelector("#addTask").onclick = function () {
         this.parentNode.remove();
       };
     }
-    let line = document.getElementsByClassName("name");
-    line.style.setProperty("text-decoration", "line-through");
+    line.addEventListener(("click"), function (){
+      line.style.textDecoration = "line-through";
+    })
   }
 };
-function strike() {
-  // let ele = document.getElementsByClassName("name");
-  // ele.style.setProperty("text-decoration", "line-through");
 
-  let list = document.getElementsByClassName("task");
-  list.addEventListener(
-    "click",
-    function (ev) {
-      if (ev.target.tagName === "span") {
-        ev.target.classList.toggle("checked");
-      }
-    },
-    false
-  );
-}
+
+// function strike() {
+//  let ele = document.getElementsByClassName("name");
+//  ele.style.textDecoration = "line-through";
+
+// }
+
+// let list = document.getElementsByClassName("task");
+// list.addEventListener(
+//   "click",
+//   function (ev) {
+//     if (ev.target.tagName === "span") {
+//       ev.target.classList.toggle("checked");
+//     }
+//   },
+//   false
+// );
