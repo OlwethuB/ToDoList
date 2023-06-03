@@ -5,37 +5,54 @@
     align-items: center;
 }
 
-body{
-
-}
-
 h1 {
   font-size: 50px;
-  color: darkred;
+  color: #2f91f4;
   text-decoration: underline;
-  margin: 100px;
   text-align: center;
+  padding: 10px;
+}
+@media screen and (max-width: 480px) {
+  h1 {
+padding: 20px;
+  }
 }
 
-
 .container{
+    top: 50%;
     text-align: center;
     width: 50%;
-    top: 50%;
     left: 50%;
     padding: 20px;
     background: rgb(31, 37, 45);
     border: 3px solid #111111;
-    min-width: 450px;
-    position: absolute;
+    min-width: 250px;
+    position: fixed;
     min-height: 100px;
     transform: translate(-50%,-50%);
+}
+@media screen and (max-width: 680px) {
+  .container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 #addInput{
     position: relative;
     padding: 30px 20px;
 }
+@media screen and (max-width: 680px) {
+    #addInput{
+        padding: 15px 10px;
+    }
+}
+
 input{
     width: 55%;
     height: 45px;
@@ -47,6 +64,16 @@ input{
     font-family: 'Poppins',sans-serif;
     font-size: 15px;
     border: 2px solid #041e2c;
+}
+@media screen and (max-width: 680px) {
+    input{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 480px) {
+    input{
+        width: 100%;
+    }
 }
 
 input:focus{
@@ -68,6 +95,15 @@ input:focus{
     border-radius: 5px;
     font-family: 'Poppins',sans-serif;
 }
+@media screen and (max-width: 480px) {
+  #addTask {
+    width: 90%;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}
+
 #fix{
     position: relative;
     font-weight: 500;
@@ -82,14 +118,55 @@ input:focus{
     border-radius: 5px;
     font-family: 'Poppins',sans-serif;  
 }
+@media screen and (max-width: 480px) {
+  #fix {
+    width: 90%;
+    height: 25px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 680px) {
+  #addInput button {
+    font-size: 10px;
+    height: 10px;
+    width: 50%;
+  }
+}
+
 
 #tasks{
     border-radius: 10px;
     width: 100%;
     position: relative;
+    height: 300px;
+    overflow-y: scroll;
     background-color: #0b67c4;
     padding: 30px 20px;
     margin-top: 10px;
+}
+/* width */
+div ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+div ::-webkit-scrollbar-track {
+  background: #0b67c4; 
+  border-radius: 10px;
+
+}
+ 
+/* Handle */
+div ::-webkit-scrollbar-thumb {
+  background: #888b8e;
+  border-radius: 4px;
+  border: 1px solid #d0d4d7;
+
+}
+
+/* Handle on hover */
+div ::-webkit-scrollbar-thumb:hover {
+  background: #053e76; 
 }
 
 .task{
@@ -104,6 +181,12 @@ input:focus{
     padding: 5px 10px;
     display: flex;
 }
+@media screen and (max-width: 680px) {
+    .task{
+        font-size: 15px;
+        height: 30px;
+    }
+}
 .task span{
     font-family: 'Poppins',sans-serif;
     font-size: 20px;
@@ -111,12 +194,23 @@ input:focus{
 }
 
 .task button{
-    background-color: #1bd511;
-    color: #ffffff;
     border: none;
     cursor: pointer;
     outline: none;
     height: 100%;
     width: 40px;
     border-radius: 5px;
+}
+@media screen and (max-width: 680px) {
+    .task button{
+width:20px;
+    }
+}
+
+.redx {
+height: fit-content;
+width: 40px;
+}
+@media screen and (max-width: 680px) {
+.redx {width: 15px; } 
 }
